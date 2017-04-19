@@ -8,27 +8,28 @@ int main()
 {
   srand(time(0));
   int random1, random2;
-  char continue;
-  
-  random1 = rand() % 6 + 1;
-  random2 = rand() % 6 + 1;
+  char cont;
   
   cout << "This program simulates the rolling of two dice." << endl;
   cout << endl;
   
-  cout << "Would you like to roll the dice?" << endl;
-  cin >> continue;
+  cout << "Would you like to roll the dice? (y/n)" << endl;
+  cin >> cont;
   
-  while (continue != n || continue != N)
+  cout << endl;
+  
+  while (cont == 'y' || cont == 'Y')
   {
-    cout << "Press Enter to roll." << endl;
-  
-    cin.get();
+    
+    random1 = rand() % 6 + 1;
+    random2 = rand() % 6 + 1;
   
     cout << random1 << " , " << random2 << endl;
     
+    cout << endl;
+    
     cout << "Would you like to roll again?" << endl;
-    cin >> continue;
+    cin >> cont;
   }
   
 return 0;
